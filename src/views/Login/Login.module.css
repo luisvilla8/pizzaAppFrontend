@@ -1,0 +1,104 @@
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+.login__title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary_text_color);
+  margin: 3rem auto 0;
+  width: fit-content;
+}
+
+.login_paragraph {
+  font-size: 1rem;
+  font-style: oblique;
+  color: var(--secondary_text_color);
+  margin: .5rem auto 5rem;
+  width: fit-content;
+}
+
+.modal__container {
+  background-color: rgba(22,22,22, .4);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 9;
+  backdrop-filter: blur(15px);
+}
+
+.modal__title {
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--primary_text_color);
+  width: fit-content;
+}
+
+.modal__paragraph {
+  font-size: .8rem;
+  color: var(--secondary_text_color);
+  width: fit-content;
+}
+
+.modal__form {
+  margin: 2rem 0;
+}
+
+.input__container {
+  margin: 1.5rem 0;
+}
+
+.label {
+  font-size: .8rem;
+  color: var(--primary_text_color);
+}
+
+.input {
+  font-size: 1rem;
+  width: 100%;
+  padding: .8rem;
+  margin-top: .5rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--secondary_bg_color);
+  color: var(--primary_text_color);
+  transition: outline .2s ease;
+}
+
+.input::placeholder {
+  font-size: .8rem;
+}
+
+.input:focus {
+  outline: none;
+  outline: 2px solid var(--primary_color);
+}
+
+.button__submit {
+  font-size: 1rem;
+  font-weight: 900;
+  width: 100%;
+  padding: .8rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--primary_color);
+  color: var(--primary_text_color);
+  cursor: pointer;
+}
+
+.button__submit:hover {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: font-size .2s ease, letter-spacing .2s ease;
+}
+
+.option__link {
+  display: block;
+  font-size: .7rem;
+  color: var(--secondary_text_color);
+}
+
+.option__link a:hover {
+  border-bottom: 1px solid var(--secondary_text_color);
+}
