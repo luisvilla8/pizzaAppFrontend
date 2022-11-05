@@ -25,6 +25,8 @@
   position: relative;
   z-index: 9;
   backdrop-filter: blur(15px);
+  width: clamp(15rem, 80vw ,35rem);
+  margin: 0 auto;
 }
 
 .modal__title {

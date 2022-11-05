@@ -9,3 +9,19 @@
   align-items: center;
   justify-content: center;
 }
+
+.container svg {
+  animation: pizzaItemLight 3s alternate-reverse infinite;
+}
+
+@keyframes pizzaItemLight {
+  0% {
+    filter: drop-shadow(3px 5px 10px rgba(208, 205, 15, 0.2));
+  }
+  50% {
+    filter: drop-shadow(3px 5px 10px rgba(208, 205, 15, 0.8));
+  }
+  100% {
+    filter: drop-shadow(3px 5px 10px rgba(208, 205, 15, 0.2));
+  }
+}

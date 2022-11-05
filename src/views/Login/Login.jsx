@@ -31,7 +31,7 @@ export const Login = () => {
           <Link to='recover'> Recuperala aquí</Link>
         </span>
       </section>
-      <PizzaBg qty={10}/>
+      <PizzaBg qty={20}/>
     </div>
   )
 }
