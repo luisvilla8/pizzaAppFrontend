@@ -11,7 +11,7 @@
 }
 
 .container svg {
-  animation: pizzaItemLight 3s alternate-reverse infinite;
+  animation: pizzaItemLight 4s alternate-reverse infinite;
 }
 
 @keyframes pizzaItemLight {
@@ -19,7 +19,7 @@
     filter: drop-shadow(3px 5px 10px rgba(208, 205, 15, 0.2));
   }
   50% {
-    filter: drop-shadow(3px 5px 10px rgba(208, 205, 15, 0.8));
+    filter: drop-shadow(3px 5px 30px rgba(208, 205, 15, 1));
   }
   100% {
     filter: drop-shadow(3px 5px 10px rgba(208, 205, 15, 0.2));
