@@ -17,8 +17,8 @@ export const Login = () => {
             <input type="text" name="email" id="email" className={style.input} placeholder="Ingrese su correo"/>
           </div>
           <div className={style.input__container}>
-            <label htmlFor="email" className={style.label}>Contraseña</label>
-            <input type="text" name="email" id="email" className={style.input} placeholder="Ingrese su contraseña"/>
+            <label htmlFor="password" className={style.label}>Contraseña</label>
+            <input type="password" name="password" id="password" className={style.input} placeholder="Ingrese su contraseña"/>
           </div>
           <button className={style.button__submit}>Iniciar Sesión</button>
         </div>
