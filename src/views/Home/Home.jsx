@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { MenuButton, Nav, Title } from "../../components";
+import { ListProducts, MenuButton, Nav, Title } from "../../components";
 import style from './Home.module.css'
 
 export const Home = () => {
@@ -25,6 +25,7 @@ export const Home = () => {
                 </Nav>
             </div>
             <input type="text" name="search" id="search" placeholder="Qué producto buscas?" className={style.input__search}/>
+            <ListProducts />
         </>
     );
 }
