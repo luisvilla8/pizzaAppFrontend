@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { getAllUsuarios } from './services'
-import { Login } from './views/Login/Login';
+import { Login, Home } from './views';
 import style from './styles/App.module.css'
 import './styles/Global.module.css'
 
@@ -17,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<p>home</p>} />
         <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
     </div>

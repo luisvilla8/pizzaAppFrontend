@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input__search {
+    background-color: var(--secondary_bg_color);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: var(--primary_text_color);
+}
+
+.input__search:focus {
+    border: 2px solid var(--primary_color);
+}

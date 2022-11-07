@@ -1,0 +1,28 @@
+.btn {
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    background: transparent;
+    gap: .5rem;
+}
+
+.btn > div {
+    background: var(--primary_text_color);
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+.btn[active="active"] div:first-child {
+    transform: rotate(45deg);
+}
+.btn[active="active"] div:nth-child(2) {
+    opacity: 0;
+}
+.btn[active="active"] div:last-child {
+    transform: rotate(-45deg);
+}
