@@ -6,6 +6,7 @@
     border: 0;
     background: transparent;
     gap: .5rem;
+    cursor: pointer;
 }
 
 .btn > div {

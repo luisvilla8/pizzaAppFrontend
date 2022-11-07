@@ -1,5 +1,7 @@
+export * from './base/Card/Card';
 export * from './base/Title/Title';
 export * from './index';
+export * from './shared/Cart';
 export * from './shared/ListProducts/ListProducts';
 export * from './shared/MenuButton/MenuButton';
 export * from './shared/Nav/Nav';

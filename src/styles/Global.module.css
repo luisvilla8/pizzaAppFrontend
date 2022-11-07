@@ -4,6 +4,12 @@
   --primary_bg_color: #272727;
   --secondary_bg_color: #161616;
   --primary_color: #E1B000;
+  --secodary_color: #CC3C3C;
+  --tertiary_color: #76B65E;
   --container_padding_y: 2rem;
   --container_padding_x: 2rem;
+}
+
+* {
+  box-sizing: border-box;
 }
