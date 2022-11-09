@@ -1,6 +1,6 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 2rem .5rem;
+    display: grid;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    gap: 2rem;
 }

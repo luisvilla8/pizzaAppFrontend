@@ -1,12 +1,37 @@
 .card {
     background-color: var(--secondary_bg_color);   
-    padding: 1rem;
+    padding: clamp(1.5rem, 2vw, 2rem);
     border-radius: 1rem;
-    width: clamp(6rem, 80vw, 10rem);
-    height: 17rem;
+    position: relative;
     color: var(--primary_text_color);
     overflow: hidden;
 }
+
+.card ::-webkit-scrollbar {
+  width: 0px;
+}
+
+.card:hover ::-webkit-scrollbar {
+    width: 5px;
+}
+
+.card ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card ::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.card ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.card ::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
 .card__picture {
     display: flex;
     margin: 1rem 0;
@@ -29,28 +54,37 @@
     margin: 1rem 0;
 }
 
+.card__description {
+    font-size: .7rem;
+    color: var(--secondary_text_color);
+    height: 20%;
+    overflow: scroll;
+}
+
 .card__precio {
     text-decoration: line-through;
     color: var(--secondary_text_color);
+    min-width: max-content
 }
 
 .card__precioFinal {
     font-weight: 900;
     font-size: 1.2rem;
+    min-width: max-content
 }
 
 .card__footer {
     margin: 1rem 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .card__btnCart {
     background-color: transparent;
     border: 2px solid var(--tertiary_color);
     border-radius: .5rem;
-    display: flex;
+    display: inline;
     cursor: pointer;
 }
 
@@ -68,11 +102,16 @@
     color: var(--primary_text_color);
     border-radius: .25rem;
     padding: .25rem .5rem;
-    margin: 0 .5rem;
     cursor: pointer;
 }
 
 .card__btnComprar:hover {
     box-shadow: 0 0 10px 5px rgba(242, 3, 3, 0.757);
     transition: box-shadow .2s ease;
+}
+
+.btn__container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
