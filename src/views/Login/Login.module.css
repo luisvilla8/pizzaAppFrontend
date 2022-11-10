@@ -19,14 +19,18 @@
 }
 
 .modal__container {
-  background-color: rgba(22,22,22, .4);
-  padding: 3rem 2rem;
-  border-radius: 1rem;
+  background-color: transparent;
   position: relative;
   z-index: 9;
-  backdrop-filter: blur(15px);
-  width: clamp(15rem, 80vw ,35rem);
+  padding: 3rem 2rem;
+}
+
+.modal__bg {
+  border-radius: 1rem;
+  overflow: hidden;
+  width: clamp(15rem, 85vw ,35rem);
   margin: 0 auto;
+  position: relative;
 }
 
 .modal__title {

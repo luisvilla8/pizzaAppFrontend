@@ -19,7 +19,7 @@ export const Card = ({ product = {} }) => {
                     <button className={style.card__btnComprar}>Comprar</button>
                 </div>
             </div>
-            {/* <PizzaBg qty={2}/> */}
+            <PizzaBg qty={10}/>
         </div>  
     );
 }

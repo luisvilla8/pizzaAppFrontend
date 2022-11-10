@@ -1,5 +1,6 @@
 .card {
-    background-color: var(--secondary_bg_color);   
+    background-color: transparent;
+    z-index: 9;
     padding: clamp(1.5rem, 2vw, 2rem);
     border-radius: 1rem;
     position: relative;
@@ -38,6 +39,8 @@
     overflow: hidden;
     width: 100%;
     height: 40%;
+    position: relative;
+    z-index: 9;
 }
 
 .card__picture img {
@@ -52,6 +55,8 @@
     font-weight: 500;
     text-align: center;
     margin: 1rem 0;
+    position: relative;
+    z-index: 9;
 }
 
 .card__description {
@@ -59,18 +64,24 @@
     color: var(--secondary_text_color);
     height: 20%;
     overflow: scroll;
+    position: relative;
+    z-index: 9;
 }
 
 .card__precio {
     text-decoration: line-through;
     color: var(--secondary_text_color);
-    min-width: max-content
+    min-width: max-content;
+    position: relative;
+    z-index: 9;
 }
 
 .card__precioFinal {
     font-weight: 900;
     font-size: 1.2rem;
-    min-width: max-content
+    min-width: max-content;
+    position: relative;
+    z-index: 9;
 }
 
 .card__footer {
@@ -78,6 +89,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
+    z-index: 9;
 }
 
 .card__btnCart {
@@ -101,7 +114,7 @@
     border: none;
     color: var(--primary_text_color);
     border-radius: .25rem;
-    padding: .25rem .5rem;
+    padding: .45rem .5rem;
     cursor: pointer;
 }
 
