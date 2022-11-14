@@ -1,16 +1,12 @@
 import { useEffect, useState } from 'react';
-import { CartItem, MenuButton } from '../../../components';
-import { getSumTotal } from '../../../utils';
+import { MenuButton } from '../../../components';
 import style from './CartProducts.module.css'
 
-export const CartProducts = ({ isopen = false, cartState = [], handleToggleCartIsOpen, precioTotal = 0 }) => {
+export const CartProducts = ({ isopen = false, handleToggleCartIsOpen, precioTotal = 0, handleToggle, children }) => {
 
   const handleSetClassnameByIsOpen = () => {
     return isopen ? "isOpen" : "";
   }
-
-  
-  
 
   return (
     <div className={style.container} isopen={handleSetClassnameByIsOpen() }>
@@ -19,16 +15,15 @@ export const CartProducts = ({ isopen = false, cartState = [], handleToggleCartI
         <MenuButton isActive="active" handleChange={ handleToggleCartIsOpen }/>
       </div>
       <div className={style.list__products}>
-      {
-        cartState.map((product, key) => (
-          <CartItem product={product} key={key} />
-        ))
-      }
+        { children }
       </div>
       <div className={style.footer}>
         <h3>Precio Total:</h3>
         <span>S/ {precioTotal}</span>
-        <button className={style.btnComprar}>REALIZAR COMPRA</button>
+        <button className={style.btnComprar} onClick={ () => {
+          handleToggleCartIsOpen();
+          handleToggle(); 
+        }}>REALIZAR COMPRA</button>
       </div>
     </div>
   )

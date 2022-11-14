@@ -1,15 +1,19 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
+  Card,
   CartIcon,
+  CartItem,
   CartProducts,
   ListProducts,
   MenuButton,
   Nav,
+  SalesForm,
   Title,
 } from "../../components";
 import { useCartContext } from "../../context/CartProvider";
 import { products as INITIAL_PRODUCTS } from '../../mock-data'
+import { useToggle } from '../../hooks'
 import style from "./Home.module.css";
 
 
@@ -17,6 +21,8 @@ export const Home = () => {
   const [isActive, setIsActive] = useState("");
   const [products, setProducts] = useState(INITIAL_PRODUCTS);
   const searchElement = useRef();
+
+  const {state: isOpenModal, handleToggle} = useToggle(false)
 
   const handleChange = () => {
     const newIsActive = isActive === "active" ? "" : "active";
@@ -63,15 +69,25 @@ export const Home = () => {
         ref={searchElement}
         placeholder="¿Qué producto buscas?"
         className={style.input__search}
-        onChange={ handleFilterItems }
+        onChange={handleFilterItems}
       />
-      <ListProducts products={products}/>
+      <ListProducts products={products}>
+        {products.map((product, key) => (
+          <Card key={key} product={product} handleToggle={handleToggle} />
+        ))}
+      </ListProducts>
       <CartProducts
         isopen={cartIsOpen}
         cartState={cartState}
         precioTotal={cartPrecioTotal}
         handleToggleCartIsOpen={handleToggleCartIsOpen}
-      />
+        handleToggle={handleToggle}
+      >
+        {cartState.map((product, key) => (
+          <CartItem product={product} key={key} />
+        ))}
+      </CartProducts>
+      <SalesForm isOpen={isOpenModal} handleToggle={handleToggle} />
     </>
   );
 };

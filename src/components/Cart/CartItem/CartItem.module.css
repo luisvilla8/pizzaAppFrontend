@@ -12,31 +12,6 @@
   align-items: center;
 }
 
-.card ::-webkit-scrollbar {
-width: 0px;
-}
-
-.card:hover ::-webkit-scrollbar {
-  width: 5px;
-}
-
-.card ::-webkit-scrollbar-track {
-background: transparent;
-}
-
-.card ::-webkit-scrollbar-thumb {
-background: #888;
-border-radius: 2px;
-}
-
-.card ::-webkit-scrollbar-thumb:hover {
-background: #555;
-}
-
-.card ::-webkit-scrollbar-corner {
-  background: transparent;
-}
-
 .card button[active="active"] {
   position: absolute;
   right: 1rem;

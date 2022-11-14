@@ -1,5 +1,6 @@
 export * from './Cart/CartItem/CartItem';
 export * from './Cart/CartList/CartProducts';
+export * from './SalesForm/SalesForm';
 export * from './base/Card/Card';
 export * from './base/Title/Title';
 export * from './index';

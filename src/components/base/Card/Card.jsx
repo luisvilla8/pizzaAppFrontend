@@ -2,12 +2,11 @@ import { CartIcon, PizzaBg } from '../../../components';
 import { useCartContext } from '../../../context/CartProvider';
 import style from './Card.module.css'
 
-export const Card = ({ product = {} }) => {
+export const Card = ({ product = {}, handleToggle }) => {
 
     const {
         cartState,
         handleAddItem,
-        // handleIncreaseItem,
       } = useCartContext();
 
     return(
@@ -31,7 +30,7 @@ export const Card = ({ product = {} }) => {
                     >
                         <CartIcon />
                     </button>
-                    <button className={style.card__btnComprar}>Comprar</button>
+                    <button className={style.card__btnComprar} onClick={ handleToggle }>Comprar</button>
                 </div>
             </div>
             <PizzaBg qty={10}/>
