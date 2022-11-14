@@ -1,0 +1,170 @@
+.card {
+  background-color: transparent;
+  /* background-color: #50505073; */
+  z-index: 9;
+  padding: clamp(1.5rem, 2vw, 2rem);
+  border-radius: 1rem;
+  position: relative;
+  color: var(--primary_text_color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card ::-webkit-scrollbar {
+width: 0px;
+}
+
+.card:hover ::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card ::-webkit-scrollbar-track {
+background: transparent;
+}
+
+.card ::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 2px;
+}
+
+.card ::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+.card ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.card button[active="active"] {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  gap: .35rem;
+  z-index: 999;
+}
+.card button[active="active"] > div{
+  background-color: var(--secodary_color);
+}
+
+.card__picture {
+  display: flex;
+  overflow: hidden;
+  width: 30%;
+  height: 100%;
+  position: relative;
+  z-index: 9;
+}
+
+.card__picture img {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.card__content {
+  width: 70%;
+}
+.card__name {
+  color: var(--primary_text_color);
+  font-size: .8rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 9;
+  display: inline;
+}
+
+.card__description {
+  font-size: .7rem;
+  color: var(--secondary_text_color);
+  height: 20%;
+  overflow: scroll;
+  position: relative;
+  z-index: 9;
+}
+
+.card__precio {
+  text-decoration: line-through;
+  color: var(--secondary_text_color);
+  min-width: max-content;
+  position: relative;
+  z-index: 9;
+}
+
+.card__precioFinal {
+  font-weight: 700;
+  font-size: 1.2rem;
+  min-width: max-content;
+  position: relative;
+  z-index: 9;
+}
+
+.card__precioTotal {
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.counter__container {
+  margin: 0.25rem 0 0;
+}
+
+.btnCounter {
+  padding: .25rem .5rem;
+  border-radius: .25rem;
+  cursor: pointer;
+  background-color: var(--primary_color);
+}
+
+.counter__value {
+  margin: 0 .25rem;
+}
+
+.card__footer {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  z-index: 9;
+}
+
+.card__btnCart {
+  background-color: transparent;
+  border: 2px solid var(--tertiary_color);
+  border-radius: .5rem;
+  display: inline;
+  cursor: pointer;
+}
+
+.card__btnCart:hover {
+  background-color: var(--tertiary_color);
+}
+
+.card__btnCart svg {
+  transform: scale(.5);
+}
+
+.card__btnComprar {
+  background-color: var(--secodary_color);
+  border: none;
+  color: var(--primary_text_color);
+  border-radius: .25rem;
+  padding: .45rem .5rem;
+  cursor: pointer;
+}
+
+.card__btnComprar:hover {
+  box-shadow: 0 0 10px 5px rgba(242, 3, 3, 0.757);
+  transition: box-shadow .2s ease;
+}
+
+.btn__container {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}

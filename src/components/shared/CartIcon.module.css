@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  cursor: pointer;
+}
+
+.extra {
+  position: absolute;
+  top: -.5rem;
+  right: -.5rem;
+  color: var(--primary_text_color);
+  background-color: var(--tertiary_color);
+  height: 1.3rem;
+  width: 1.3rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  /* animation: bright .3s ease alternate; */
+}
+
+@keyframes bright {
+  0% {
+    filter: drop-shadow(3px 5px 10px rgba(208, 205, 15, 0.2));
+  }
+  50% {
+    filter: drop-shadow(3px 5px 10px rgba(208, 205, 15, 0.8));
+  }
+  100% {
+    filter: drop-shadow(3px 5px 10px rgba(208, 205, 15, 0.2));
+  }
+}

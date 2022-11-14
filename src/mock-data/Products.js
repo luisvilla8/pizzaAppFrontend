@@ -28,28 +28,28 @@ export const products = [
         precioFinal: 30.00
     },
     {
-        id: 0,
+        id: 4,
         nombre: "Pizzaa Americana",
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis risus dui, in varius justo fermentum eu. Pellentesque tincidunt nibh turpis.",
         precio: 40.00,
         precioFinal: 30.00
     },
     {
-        id: 1,
+        id: 5,
         nombre: "Pizzaa Americana 1",
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis risus dui, in varius justo fermentum eu. Pellentesque tincidunt nibh turpis.",
         precio: 40.00,
         precioFinal: 30.00
     },
     {
-        id: 2,
+        id: 6,
         nombre: "Pizzaa Americana 2",
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis risus dui, in varius justo fermentum eu. Pellentesque tincidunt nibh turpis.",
         precio: 40.00,
         precioFinal: 30.00
     },
     {
-        id: 3,
+        id: 7,
         nombre: "Pizzaa Americana 3",
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis risus dui, in varius justo fermentum eu. Pellentesque tincidunt nibh turpis.",
         precio: 40.00,

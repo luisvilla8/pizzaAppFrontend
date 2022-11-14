@@ -5,3 +5,10 @@ export const getArrayFromNumber = (number = 0) => {
   }
   return array;
 }
+
+export const getSumTotal = (array = [], attr = "") => {
+  const total = array.reduce((acc, item) => {
+    return acc + (item[attr] * item["cantidad"]);
+  }, 0);
+  return total;
+}
