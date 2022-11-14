@@ -16,7 +16,7 @@ export const CartItem = ({ product = {} }) => {
     <div className={style.card}>
       <MenuButton isActive="active" handleChange={() => handleRemoveItem(product.id)}/>
       <picture className={style.card__picture}>
-        <img src="src/assets/pizza.png" alt="" />
+        <img src="https://raw.githubusercontent.com/luisvilla8/pizzaAppFrontend/dev/src/assets/pizza.png" alt="itemimg" />
       </picture>
       <div className={style.card__content}>
         <p className={style.card__name}>{product.nombre}</p>
