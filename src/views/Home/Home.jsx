@@ -15,6 +15,7 @@ import { useCartContext } from "../../context/CartProvider";
 import { products as INITIAL_PRODUCTS } from '../../mock-data'
 import { useToggle } from '../../hooks'
 import style from "./Home.module.css";
+import { useAuthContext } from "../../context";
 
 
 export const Home = () => {
@@ -35,6 +36,7 @@ export const Home = () => {
     cartPrecioTotal,
     handleToggleCartIsOpen,
   } = useCartContext();
+  const { user, isLogged, handleLogOut } = useAuthContext();
 
   const handleFilterItems = () => {
     const filteredProducts = INITIAL_PRODUCTS.filter((product) =>{
@@ -57,11 +59,13 @@ export const Home = () => {
           <Nav isActive={isActive}>
             <Link to="register">Llámanos</Link>
             <Link to="register">Whatsapp</Link>
-            <Link to="register">Registrate</Link>
-            <Link to="/login">Iniciar sesión</Link>
+            <Link to="/sign-up">Registrate</Link>
+            { !isLogged && <Link to="/login">Iniciar sesión</Link> }
+            { isLogged && <button onClick={ handleLogOut }>Cerrar sesión</button> }
           </Nav>
         </div>
       </div>
+      { isLogged && <p>Hola <span>{user.nombre}</span>, bienvenido(a)!</p>}
       <input
         type="text"
         name="search"

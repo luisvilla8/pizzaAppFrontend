@@ -4,6 +4,14 @@
     align-items: center;
 }
 
+.header + p {
+    color: var(--primary_text_color);
+    margin-top: 1rem;
+}
+.header + p span {
+    font-weight: 900;
+}
+
 .header__btn {
     display: flex;
     flex-direction: row;

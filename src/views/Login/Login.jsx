@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { PizzaBg } from '../../components'
+import { useAuthContext } from '../../context'
+import { authUser } from '../../services'
 import style from './Login.module.css'
 
 export const Login = () => {
@@ -15,8 +17,16 @@ export const Login = () => {
     setForm({...form, [name]: value});
   }
 
-  const handleSubmit = () => {
-    console.log("form", form)
+  const navigate = useNavigate();
+  const { handleAddUser } = useAuthContext();
+
+  const handleSubmit = async () => {
+    const { email, password } = form;
+    const isAuth = await authUser(email, password);
+    if(isAuth) {
+      handleAddUser(isAuth);
+      navigate("/home")
+    }
   }
 
   return (
@@ -46,7 +56,7 @@ export const Login = () => {
           </div>
           <span className={style.option__link}>
             No tienes cuenta? 
-            <Link to='signUp'> Registrate aquí</Link>        
+            <Link to='/sign-up'> Registrate aquí</Link>        
           </span>
           <span className={style.option__link}>
             Olvidaste tu contraseña? 
