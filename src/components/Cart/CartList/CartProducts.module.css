@@ -23,18 +23,21 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 1rem;
 }
 
+.header > button[active="active"] {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .header > button[active="active"] div {
   height: 5px;
-  width: 2.3rem;
+  width: 1.9rem;
   background-color: var(--secondary_text_color);
 }
 .header > button[active="active"]:hover div {
   height: 5px;
-  width: 2.3rem;
+  width: 1.9rem;
   background-color: var(--primary_text_color);
 }
 

@@ -1,8 +1,7 @@
-import { products } from '../../../mock-data'
 import { Card } from '../../../components';
 import style from './ListProducts.module.css'
 
-export const ListProducts = () => {
+export const ListProducts = ({ products = [] }) => {
 
 
     return (

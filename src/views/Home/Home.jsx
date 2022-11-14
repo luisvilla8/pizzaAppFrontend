@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   CartIcon,
@@ -9,11 +9,14 @@ import {
   Title,
 } from "../../components";
 import { useCartContext } from "../../context/CartProvider";
-import { getSumTotal } from "../../utils";
+import { products as INITIAL_PRODUCTS } from '../../mock-data'
 import style from "./Home.module.css";
+
 
 export const Home = () => {
   const [isActive, setIsActive] = useState("");
+  const [products, setProducts] = useState(INITIAL_PRODUCTS);
+  const searchElement = useRef();
 
   const handleChange = () => {
     const newIsActive = isActive === "active" ? "" : "active";
@@ -23,14 +26,16 @@ export const Home = () => {
   const {
     cartState,
     cartIsOpen,
+    cartPrecioTotal,
     handleToggleCartIsOpen,
   } = useCartContext();
 
-  const [precioTotal, setPrecioTotal] = useState(0);
-
-  useEffect(() => {
-    setPrecioTotal(getSumTotal(cartState, "precioFinal"));
-  }, [cartState]);
+  const handleFilterItems = () => {
+    const filteredProducts = INITIAL_PRODUCTS.filter((product) =>{
+        return product.nombre.toLowerCase().includes(searchElement.current.value.toLowerCase())
+    })
+    setProducts(filteredProducts);
+  }
 
   return (
     <>
@@ -55,14 +60,16 @@ export const Home = () => {
         type="text"
         name="search"
         id="search"
-        placeholder="Qué producto buscas?"
+        ref={searchElement}
+        placeholder="¿Qué producto buscas?"
         className={style.input__search}
+        onChange={ handleFilterItems }
       />
-      <ListProducts />
+      <ListProducts products={products}/>
       <CartProducts
         isopen={cartIsOpen}
         cartState={cartState}
-        precioTotal={precioTotal}
+        precioTotal={cartPrecioTotal}
         handleToggleCartIsOpen={handleToggleCartIsOpen}
       />
     </>
