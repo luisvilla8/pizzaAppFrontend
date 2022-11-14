@@ -12,7 +12,7 @@ export const Card = ({ product = {}, handleToggle }) => {
     return(
         <div className={style.card}>
             <picture className={style.card__picture}>
-                <img src="src/assets/pizza.png" alt="" />
+                <img src="https://raw.githubusercontent.com/luisvilla8/pizzaAppFrontend/dev/src/assets/pizza.png" alt="pizza" />
             </picture>
             <p className={style.card__name}>
                 {product.nombre}
